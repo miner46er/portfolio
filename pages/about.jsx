@@ -25,11 +25,11 @@ function About () {
         <div className={styles.contact}>
           <div className={styles.contactDetail}>
             <img src='/GitHub-Mark-64px.png' />
-            <a href='github.com/miner46er'>github.com/miner46er</a>
+            <a href='https://github.com/miner46er'>miner46er</a>
           </div>
           <div className={styles.contactDetail}>
             <img src='/LI-In-Bug.png' />
-            <a href='linkedin.com/in/stefanusardi'>linkedin.com/in/stefanusardi</a>
+            <a href='https://linkedin.com/in/stefanusardi'>stefanusardi</a>
           </div>
         </div>
       </main>

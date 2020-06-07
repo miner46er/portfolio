@@ -15,7 +15,7 @@ function Projects () {
           name='Orpheus'
           description='Multipurpose Discord bot mainly used for searching and playing youtube musics on Discord servers and checking Rainbow 6 Siege player stats. Built using Node.js, Discord.js, and various APIs.'
           image='/projects/orpheus.jpg'
-          demo='orpheus.anjir.pro'
+          demo='https://orpheus.anjir.pro'
           source=''
         />
         <Project
@@ -29,7 +29,7 @@ function Projects () {
           name='Me, You & Our Dream'
           description='A platformer game project created using Unity in C#. '
           image='/projects/our_dream.jpg'
-          demo='sorrowinrain.itch.io/me-you-our-dream'
+          demo='https://sorrowinrain.itch.io/me-you-our-dream'
           source=''
         />
       </main>
