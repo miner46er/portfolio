@@ -1,0 +1,119 @@
+@use "./_include-media";
+@use './const';
+
+.container {
+    display: flex;
+
+    @include include-media.media('<desktop') {
+        flex-direction: column;
+        margin: 20px 30px;
+    }
+
+    @include include-media.media('>=desktop') {
+        flex-direction: row;
+        margin: 100px;
+    }
+}
+
+.image {
+    flex: 1;
+    object-fit: contain;
+
+    @include include-media.media('<desktop') {
+        width: 100%;
+        min-width: 100%;
+
+        filter: drop-shadow(0 0 3px rgba(0,0,0,0.4));
+    }
+
+    @include include-media.media('>=desktop') {
+        width: 50%;
+        min-width: 50%;
+        
+        filter: drop-shadow(0 0 6px rgba(0,0,0,0.4));
+    }
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+    color: const.$accent-black;
+
+    @include include-media.media('<desktop') {
+        margin: 0 10px 100px;
+    }
+
+    @include include-media.media('>=desktop') {
+        margin: 0 30px;
+    }
+}
+
+.title {
+    text-align: center;
+    color: const.$accent-blue;
+    font-weight: 600;
+
+    @include include-media.media('<tablet') {
+        font-size: 1.5rem;
+        margin: 10px 0;
+    }
+
+    @include include-media.media('>=tablet', '<desktop') {
+        font-size: 2rem;
+        margin: 20px 0;
+    }
+
+    @include include-media.media('>=desktop') {
+        font-size: 3rem;
+        margin: 20px 0;
+    }
+}
+
+.description {
+    margin: 20px 0;
+
+    @include include-media.media('<tablet') {
+        font-size: 1rem;
+    }
+
+    @include include-media.media('>=tablet', '<desktop') {
+        font-size: 1.2rem;
+    }
+
+    @include include-media.media('>=desktop') {
+        font-size: 1.5rem;
+    }
+}
+
+.reference {
+    display: flex;
+    align-items: center;
+    font-size: inherit;
+    margin: 10px 0;
+
+    i {
+        margin-right: 10px;
+    }
+
+    a, p {
+        @include include-media.media('<tablet') {
+            font-size: 1rem;
+        }
+    
+        @include include-media.media('>=tablet', '<desktop') {
+            font-size: 1.2rem;
+        }
+    
+        @include include-media.media('>=desktop') {
+            font-size: 1.5rem;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: const.$accent-blue;
+        font-weight: 600;
+    }
+}

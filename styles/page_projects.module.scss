@@ -1,0 +1,16 @@
+@use "./_include-media";
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    @include include-media.media('<tablet') {
+        margin: 0 30px;
+    }
+
+    @include include-media.media('>=tablet', '<desktop') {
+        margin: 0 60px;
+    }
+}
