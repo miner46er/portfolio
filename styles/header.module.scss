@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    height: 70px;
+    background-color: #ffffff;
+    align-items: center;
+    border-bottom: 2px solid #eaeaea;
+    z-index: 1000;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}

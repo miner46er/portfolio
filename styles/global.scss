@@ -1,0 +1,6 @@
+@use 'reset-css.scss';
+
+html, body, #__next {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+}

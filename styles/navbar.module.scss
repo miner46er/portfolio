@@ -1,0 +1,39 @@
+@use './_include-media';
+@use './const';
+
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+
+    @include include-media.media('>=phone', '<desktop') {
+        margin: 0 30px;
+    }
+
+    @include include-media.media('>=desktop') {
+        margin: 0 300px;
+    }
+}
+
+.navLink {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: const.$accent-grey;
+    -webkit-transition: color 0.2s ease;
+    transition: color 0.2s ease;
+
+    &:hover {
+        color: const.$accent-black;
+        -webkit-transition: color 0.2s ease;
+        transition: color 0.2s ease;
+    }
+}
+
+.selected {
+    color: const.$accent-blue;
+    font-weight: 600;
+
+    &:hover {
+        color: const.$accent-blue;
+    }
+}

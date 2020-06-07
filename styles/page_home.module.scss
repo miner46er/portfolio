@@ -1,0 +1,31 @@
+@use './const';
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px;
+}
+
+.h1 {
+    font-size: 5rem;
+    font-weight: 600;
+    margin: 1rem 0;
+
+    em {
+        color: const.$accent-blue;
+    }
+}
+
+.h2 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
