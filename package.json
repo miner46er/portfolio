@@ -1,18 +1,14 @@
 {
   "name": "portfolio",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
     "start": "next start",
     "lint": "standard",
-    "lint:fix": "standard --fix"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "lint:fix": "standard --fix",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -20,14 +16,12 @@
     ]
   },
   "dependencies": {
-    "next": "9.4.4",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "sass": "^1.26.8"
+    "next": "^12.0.4",
+    "sass": "^1.43.5"
   },
   "devDependencies": {
-    "husky": "^4.2.5",
-    "lint-staged": "^10.2.9",
-    "standard": "^14.3.4"
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.2",
+    "standard": "^16.0.4"
   }
 }
