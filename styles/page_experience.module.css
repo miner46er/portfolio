@@ -1,0 +1,217 @@
+.lead {
+  max-width: var(--measure);
+  color: var(--muted);
+  margin-top: var(--s4);
+}
+
+.contactRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+  margin-top: var(--s5);
+}
+
+.contactLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  min-height: 44px;
+  padding: 0 var(--s3);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-decoration: none;
+  transition: border-color var(--dur-fast) var(--ease-out), background-color var(--dur-fast) var(--ease-out);
+}
+
+@media (hover: hover) {
+  .contactLink:hover {
+    border-color: var(--border-strong);
+    background: var(--surface-2);
+  }
+}
+
+.contactLink svg {
+  width: 16px;
+  height: 16px;
+  flex: none;
+}
+
+.resumeGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr);
+  gap: var(--s7);
+  margin-top: var(--s8);
+  align-items: start;
+}
+
+.resumeCol > h2 {
+  font-size: var(--fs-xl);
+  margin-bottom: var(--s5);
+}
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 var(--s4);
+  border-left: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s6);
+}
+
+.timelineItem {
+  position: relative;
+}
+
+.timelineItem::before {
+  content: '';
+  position: absolute;
+  left: calc(-1 * var(--s4) - 4.5px);
+  top: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.timelineRole {
+  font-size: var(--fs-lg);
+}
+
+.timelineCompany {
+  display: block;
+  margin-top: var(--s1);
+  color: var(--accent);
+  font-weight: 500;
+  font-size: var(--fs-sm);
+}
+
+.timelineDates {
+  display: block;
+  margin-top: 2px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--muted);
+}
+
+.timelinePoints {
+  margin: var(--s3) 0 0;
+  padding-left: var(--s4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+  color: var(--muted);
+  font-size: var(--fs-sm);
+}
+
+.timelineMedia {
+  margin-top: var(--s3);
+  margin-left: var(--s4);
+  display: grid;
+  gap: var(--s3);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.timelineFigure {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  background: var(--surface);
+  overflow: hidden;
+  transition: border-color var(--dur-slow) var(--ease-out), background-color var(--dur-slow) var(--ease-out);
+}
+
+.timelineFigure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.timelineFigure figcaption {
+  padding: var(--s2) var(--s3);
+  border-top: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--muted);
+}
+
+.sideCard {
+  border: 1px solid var(--border);
+  border-radius: var(--r3);
+  padding: var(--s5);
+  background: var(--surface);
+  transition: border-color var(--dur-slow) var(--ease-out), background-color var(--dur-slow) var(--ease-out);
+}
+
+.sideCard + .sideCard {
+  margin-top: var(--s5);
+}
+
+.sideCard h3 {
+  font-size: var(--fs-base);
+  margin-bottom: var(--s4);
+}
+
+.sideStack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s4);
+}
+
+.skillGroup {
+  display: grid;
+  gap: 2px;
+}
+
+.skillGroupLabel {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--muted);
+}
+
+.skillGroupValue {
+  font-size: var(--fs-sm);
+}
+
+.sideCardTitle {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-sm);
+}
+
+.sideCardSub {
+  margin-top: 2px;
+  font-size: var(--fs-sm);
+  color: var(--muted);
+}
+
+.pointList {
+  margin: var(--s3) 0 0;
+  padding-left: var(--s4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+  color: var(--muted);
+  font-size: var(--fs-sm);
+}
+
+@media (max-width: 860px) {
+  .resumeGrid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--s7);
+    margin-top: var(--s7);
+  }
+}
+
+@media (max-width: 560px) {
+  .timelineMedia {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

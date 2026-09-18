@@ -1,0 +1,103 @@
+.hero {
+  padding-block: var(--s9) var(--s8);
+}
+
+.heroInner {
+  max-width: 46rem;
+}
+
+.statusStrip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s2);
+  margin-bottom: var(--s5);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: .04em;
+  color: var(--muted);
+}
+
+.statusLabel {
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  border-radius: var(--r1);
+  padding: 2px var(--s2);
+  text-transform: uppercase;
+  letter-spacing: .14em;
+}
+
+.statusLive {
+  color: var(--text);
+}
+
+.statusDot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--teal);
+  margin-right: var(--s2);
+  vertical-align: middle;
+}
+
+.heroTitle {
+  font-size: var(--fs-hero);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.heroPrompt {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  color: var(--muted);
+  margin-right: var(--s3);
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.heroType {
+  margin-top: var(--s5);
+  font-family: var(--font-mono);
+  font-size: var(--fs-lg);
+  color: var(--muted);
+  min-height: 1.75em;
+}
+
+.heroStandfirst {
+  margin-top: var(--s5);
+  max-width: 36ch;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.3rem, 2.8vw, 1.85rem);
+  line-height: 1.35;
+  color: var(--text);
+}
+
+.heroLede {
+  margin-top: var(--s5);
+  max-width: 54ch;
+  color: var(--muted);
+}
+
+.heroActions {
+  margin-top: var(--s6);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s3);
+}
+
+@media (max-width: 720px) {
+  .hero {
+    padding-block: var(--s8) var(--s7);
+  }
+}
+
+@media print {
+  .heroActions {
+    display: none;
+  }
+}
