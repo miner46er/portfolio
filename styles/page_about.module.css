@@ -1,0 +1,58 @@
+.about {
+  max-width: var(--measure);
+}
+
+.aboutHead {
+  margin-bottom: var(--s6);
+}
+
+.lead {
+  font-size: var(--fs-xl);
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.body {
+  margin-top: var(--s5);
+}
+
+.body > * + * {
+  margin-top: var(--s5);
+  color: var(--muted);
+}
+
+.links {
+  margin-top: var(--s7);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s3);
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  min-height: 44px;
+  padding: 0 var(--s4);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  background: var(--surface);
+  color: var(--text);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  text-decoration: none;
+  transition: border-color var(--dur-fast) var(--ease-out), background-color var(--dur-fast) var(--ease-out);
+}
+
+@media (hover: hover) {
+  .socialLink:hover {
+    border-color: var(--border-strong);
+    background: var(--surface-2);
+  }
+}
+
+.socialLink svg {
+  width: 18px;
+  height: 18px;
+}

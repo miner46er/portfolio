@@ -1,0 +1,24 @@
+.progress {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 3px;
+  z-index: 70;
+  background: transparent;
+  pointer-events: none;
+}
+
+.bar {
+  height: 100%;
+  width: 100%;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform 90ms linear, background-color var(--dur-slow) var(--ease-out);
+  will-change: transform;
+}
+
+@media print {
+  .progress {
+    display: none;
+  }
+}
